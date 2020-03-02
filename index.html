@@ -981,10 +981,10 @@
         var OutTime = document.getElementById( "OutTime" );
         var InDate = document.getElementById( "InDate" );
         var InTime = document.getElementById( "InTime" );
-        CurrentTime.textContent = date.getHours().toString() + ":" + date.getMinutes().toString();
-        OutDate.textContent = ("0" + (date.getMonth() + 1)).slice(-2) + "-" + ("0" + date.getMonth()).slice(-2);
-        OutTime.textContent = (date.getHours() - 1).toString() + ":" + (date.getMinutes() - 6).toString();
-        InDate.textContent = ("0" + (date.getMonth() + 1)).slice(-2) + "-" + ("0" + date.getMonth()).slice(-2);
+        CurrentTime.textContent = ("0" + date.getHours()).slice(-2).toString() + ":" + ("0" + date.getMinutes()).slice(-2).toString();
+        OutDate.textContent = ("0" + (date.getMonth() + 1)).slice(-2) + "-" + ("0" + date.getDate()).slice(-2);
+        OutTime.textContent = ("0" + (date.getHours()-1)).slice(-2) + ":" + ("0" + (date.getMinutes()-6)).slice(-2).toString();
+        InDate.textContent = ("0" + (date.getMonth() + 1)).slice(-2) + "-" + ("0" + date.getDate()).slice(-2);
         InTime.textContent = date.getHours().toString() + ":" + date.getMinutes().toString();
     }
     function hide() {
@@ -993,8 +993,8 @@
         var OutDate = document.getElementById( "OutDate" );
         var OutTime = document.getElementById( "OutTime" );
         CurrentTime.textContent = date.getHours().toString() + ":" + date.getMinutes().toString();
-        OutDate.textContent = ("0" + (date.getMonth() + 1)).slice(-2) + "-" + ("0" + date.getMonth()).slice(-2);
-        OutTime.textContent = date.getHours().toString() + ":" + date.getMinutes().toString();
+        OutDate.textContent = ("0" + (date.getMonth() + 1)).slice(-2) + "-" + ("0" + date.getDate()).slice(-2);
+        OutTime.textContent = ("0" + (date.getHours()-1)).slice(-2) + ":" + ("0" + (date.getMinutes()-6)).slice(-2).toString();
 
         document.getElementById("in1").style.visibility="hidden";
         document.getElementById("in2").style.visibility="hidden";
